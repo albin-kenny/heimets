@@ -10,16 +10,31 @@ position: relative;
 width: 100%;
 height: 100%;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
+gap: 32px;
 }
 
-.scene img {
-position: absolute;
+.image-wrap {
+width: min(420px, 70vw);
+height: min(420px, 70vw);
+border-radius: 28px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+background: conic-gradient(from 200deg at 50% 50%, #ff7ab6, #ffd76b, #7ef9ff, #9b8cff, #ff7ab6);
+box-shadow: 0 20px 60px rgba(0,0,0,0.45), inset 0 6px 24px rgba(255,255,255,0.06);
+padding: 6px;
+}
+
+.image-wrap img {
 width: 100%;
 height: 100%;
 object-fit: cover;
-filter: saturate(1.3) contrast(1.1);
+filter: saturate(1.1) contrast(1.05);
+display: block;
 }
 
 .content {
